@@ -77,7 +77,8 @@ int Z906::cmd(uint8_t cmd_a, uint8_t cmd_b){
 	if (millis() - currentMillis > SERIAL_TIME_OUT) return 0;
 
 	for(int i = 0; i < ACK_TOTAL_LENGTH; i++) dev_serial->read();
-
+	
+	return 0;
 }
 
 void Z906::print_status(){
